@@ -12,20 +12,14 @@ function calcDisc(a, b, c) {
 
 function solveQuard(a, b, c) {
     const d = calcDisc(a, b, c);
-    let x1;
-    let x2;
     if (d < 0) {
         return 'Не вирішено';
     }
     else if (d === 0) {
-        x1 = (-b + Math.sqrt(d)) / (2 * a);
-        x2 = (-b - Math.sqrt(d)) / (2 * a);
-        return 'x1 =' + x1 + 'x2 =' + x2;
+        return 'x1 = x2 = ' + (-b + Math.sqrt(d)) / (2 * a);
     }
     else {
-        x1 = (-b + Math.sqrt(d)) / (2 * a);
-        x2 = (-b - Math.sqrt(d)) / (2 * a);
-        return 'x1 =' + x1 + '<br>' + 'x2 =' + x2;
+        return 'x1 =' + (-b + Math.sqrt(d)) / (2 * a) + '<br>' + 'x2 =' + (-b - Math.sqrt(d)) / (2 * a);
     }
 }
 
